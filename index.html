@@ -1,19 +1,28 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="fa" dir="rtl">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>رستوران من | تجربه‌ای متفاوت</title>
+<title>کافه رستوران|عمارت همای</title>
 <link rel="stylesheet" href="style.css">
 <link rel="stylesheet" href="https://unpkg.com/@majidh1/jalalidatepicker/dist/jalalidatepicker.min.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<link rel="icon" type="image/jpg" sizes="32x32" href="./download (1).jpg">
+<link rel="icon" type="image/jpg" sizes="64x64" href="./download (1).jpg">
+<link rel="icon" type="image/jpg" sizes="128x128" href="./download (1).jpg">
+
+<!-- CSS اختیاری SweetAlert2 -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+
+<!-- JS SweetAlert2 -->
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
 </head>
 <body>
 
 <!-- ناوبری -->
 <div class="nav-container">
-  <img class="img had" src="./images.jpg">
+  <img class="img had" src="./download (1).jpg">
   <div class="logo">
     <span id="nav"></span>
     
@@ -45,7 +54,6 @@
   <p>بهترین تجربه غذا را در محیطی دلنشین داشته باشید</p>
 </div>
 
-  </div> 
 
   <!-- محتوای هدر -->
   <div class="header-content">
@@ -107,7 +115,7 @@
     <div class="menu-grid">
       <!-- پیتزا -->
       <div class="menu-card" data-category="pizza">
-        <img src="./عکس غذای مرغ گریل در رستوران های شیک.jpg" alt="پیتزا مخصوص">
+        <img src="./پیتزا (3).jpg" alt="پیتزا مخصوص">
         <div class="menu-info">
           <h3>پیتزا مخصوص</h3>
           <p>ترکیب گوشت، قارچ و پنیر چدار</p>
@@ -115,7 +123,7 @@
         </div>
       </div>
       <div class="menu-card" data-category="pizza">
-        <img src="./عکس همبرگر.jpg" alt="پیتزا مرغ">
+        <img src="./پیتزا (1).jpg" alt="پیتزا مرغ">
         <div class="menu-info">
           <h3>پیتزا مرغ</h3>
           <p>مرغ تازه با پنیر موزارلا</p>
@@ -123,9 +131,71 @@
         </div>
       </div>
 
+      <div class="menu-card" data-category="pizza">
+        <img src="./پیتزا (2).jpg" alt="پیتزا مرغ">
+        <div class="menu-info">
+          <h3>پیتزا مرغ</h3>
+          <p>مرغ تازه با پنیر موزارلا</p>
+          <span class="price">۲۸۰,۰۰۰ تومان</span>
+        </div>
+      </div>
+      
+      <div class="menu-card" data-category="drinks">
+        <img src="./انواع نوشیدنی.jpg" alt="پیتزا مرغ">
+        <div class="menu-info">
+          <h3>نوشیدنی</h3>
+          <p>نوشیدنی سرد ودل چسب</p>
+          <span class="price">۲۸۰,۰۰۰ تومان</span>
+        </div>
+      </div>
+      
+      <div class="menu-card" data-category="drinks">
+        <img src="./انواع نوشیدنی.jpg" alt="پیتزا مرغ">
+        <div class="menu-info">
+          <h3>نوشیدنی</h3>
+          <p>نوشیدنی سرد ودل چسب</p>
+          <span class="price">۲۸۰,۰۰۰ تومان</span>
+        </div>
+      </div>
+      
+      <div class="menu-card" data-category="appetizers">
+        <img src="./پیش غذا (1).jpg" alt="پیتزا مرغ">
+        <div class="menu-info">
+          <h3>پیش غذا</h3>
+          <p>گرم تازه و باطعم به یاد ماندنی</p>
+          <span class="price">۲۸۰,۰۰۰ تومان</span>
+        </div>
+      </div>
+      
+      <div class="menu-card" data-category="appetizers">
+        <img src="./پیش غذا (2).jpg" alt="پیتزا مرغ">
+        <div class="menu-info">
+          <h3>پیش غذا</h3>
+          <p>گرم تازه و باطعم به یاد ماندنی</p>
+          <span class="price">۲۸۰,۰۰۰ تومان</span>
+        </div>
+      </div>
+      
+      <div class="menu-card" data-category="appetizers">
+        <img src="./پیش غذا (3).jpg" alt="پیتزا مرغ">
+        <div class="menu-info">
+          <h3>پیش غذا</h3>
+          <p>گرم تازه و باطعم به یاد ماندنی</p>
+          <span class="price">۲۸۰,۰۰۰ تومان</span>
+        </div>
+      </div>
+      
+      <div class="menu-card" data-category="appetizers">
+        <img src="./پیش غذا (4).jpg" alt="پیتزا مرغ">
+        <div class="menu-info">
+          <h3>پیش غذا</h3>
+          <p>گرم تازه و باطعم به یاد ماندنی</p>
+          <span class="price">۲۸۰,۰۰۰ تومان</span>
+        </div>
+      </div>
       <!-- نوشیدنی -->
       <div class="menu-card" data-category="drinks">
-        <img src="./عکس غذای مرغ گریل در رستوران های شیک.jpg" alt="اسموتی توت فرنگی">
+        <img src="./download (2).jpg" alt="اسموتی توت فرنگی">
         <div class="menu-info">
           <h3>اسموتی توت فرنگی</h3>
           <p>تازه و خنک</p>
@@ -135,7 +205,15 @@
 
       <!-- کافه -->
       <div class="menu-card" data-category="cafe">
-        <img src="./download.jpg" alt="کاپوچینو">
+        <img src="./download (3).jpg" alt="کاپوچینو">
+        <div class="menu-info">
+          <h3>کاپوچینو</h3>
+          <p>قهوه خوش‌طعم و کرم دار</p>
+          <span class="price">۴۵,۰۰۰ تومان</span>
+        </div>
+      </div>
+      <div class="menu-card" data-category="cafe">
+        <img src="./images (3(.jpg" alt="کاپوچینو">
         <div class="menu-info">
           <h3>کاپوچینو</h3>
           <p>قهوه خوش‌طعم و کرم دار</p>
@@ -145,9 +223,9 @@
 
       <!-- پیش‌غذا -->
       <div class="menu-card" data-category="appetizers">
-        <img src="./عکس غذا های رستوران شیک.jpg" alt="سالاد سزار">
+        <img src="./پیش غذا.jpg" alt="سالاد سزار">
         <div class="menu-info">
-          <h3>سالاد سزار</h3>
+          <h3>پیش غذا</h3>
           <p>تازه و سبک</p>
           <span class="price">۷۰,۰۰۰ تومان</span>
         </div>
@@ -156,6 +234,15 @@
       <!-- غذای اصلی -->
       <div class="menu-card" data-category="main">
         <img src="./عکس همبرگر.jpg" alt="استیک گوشت">
+        <div class="menu-info">
+          <h3>اوریال برگر</h3>
+          <p>آبدار و لذیذ</p>
+          <span class="price">۳۸۰,۰۰۰ تومان</span>
+        </div>
+      </div>
+
+            <div class="menu-card" data-category="main">
+        <img src="./عکس غذای مرغ گریل در رستوران های شیک.jpg" alt="استیک گوشت">
         <div class="menu-info">
           <h3>استیک گوشت</h3>
           <p>آبدار و لذیذ</p>
@@ -308,6 +395,9 @@
   <div class="container">
     <div class="footer-grid">
       <!-- لوگو و معرفی -->
+       <div>
+        <img style="width:auto;"  src="./download (1).jpg">
+       </div>
       <div class="footer-brand">
         <h2 class="logo"; >عمارت همای</h2>
         <p>بهترین غذاها با طعم اصیل و کیفیت بی‌نظیر</p>
@@ -350,6 +440,13 @@
         <span id="aeftekar"></span>
       </div>
     </div>
+  
+<div class="namad siad" dir="rtl" aria-label="نمادها">
+  <img src="./نماد-اتحادیه-کشوری-کسب-و-کارهای-مجازی (1).webp" alt="نماد اتحادیه کشوری" loading="lazy">
+  <img src="./نماد-ساماندهی-یا-نشان-ملی-ثبت-سامانه-های-دیجیتال.webp" alt="نماد ساماندهی" loading="lazy">
+  <img src="./نماد-اعتماد-الکترونیک-یا-اینماد.webp" alt="نماد اعتماد الکترونیک" loading="lazy">
+</div>
+
     <div class="footer-bottom"; style="margin-left:50%;">
       <p>© 2025 کافه رستوران عمارت همای. تمام حقوق این سایت محفوظ میباشد.</p>
     </div>
@@ -360,6 +457,14 @@
 <div class="circle-cursor"></div>
 <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
 <script src="https://unpkg.com/@majidh1/jalalidatepicker/dist/jalalidatepicker.min.js"></script>
+
+<button onclick="showAdvancedAlert('success', 'عملیات موفقیت‌آمیز بود!')">موفقیت</button>
+<button onclick="showAdvancedAlert('error', 'عملیات با خطا مواجه شد!')">خطا</button>
+<button onclick="showAdvancedAlert('warning', 'هشدار! مراقب باشید')">هشدار</button>
+<button onclick="showAdvancedAlert('info', 'این یک پیام اطلاعاتی است')">اطلاعات</button>
+
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
 <script>
 /* موس دایره‌ای */
 const cursor=document.querySelector('.circle-cursor');
@@ -412,40 +517,47 @@ tabs.forEach(tab => {
   // فرم رزرو
   document.getElementById("reservationForm").addEventListener("submit", function(e) {
     e.preventDefault();
-    alert("رزرو شما ثبت شد. سپاس از انتخاب شما!");
+    Swal.fire("رزرو شما ثبت شد. سپاس از انتخاب شما!");
     // اینجا می‌تونی ارسال به سرور یا ذخیره اطلاعات انجام بدی
   });
-  var typed = new Typed('#typed-text', {
-    strings: ["عمارت همای ", "بهترین غذاهای سنتی", "محیطی دلنشین و آرام" ,"با غذاهای تازه و لذیذ ما، لحظاتی به‌یادماندنی بسازید"],
-    typeSpeed: 95,    // سرعت تایپ
-    backSpeed: 95,    // سرعت پاک کردن
-    backDelay: 2000,  // تاخیر قبل از پاک کردن
-    loop: true,       // تکرار نامحدود
-    showCursor:false,
+  const typedHeader = new Typed('#typed-text', {
+  strings: [
+    "عمارت همای ",
+    "بهترین غذاهای سنتی",
+    "محیطی دلنشین و آرام",
+    "با غذاهای تازه و لذیذ ما، لحظاتی به‌یادماندنی بسازید"
+  ],
+  typeSpeed: 95,
+  backSpeed: 95,
+  backDelay: 2000,
+  loop: true,
+  showCursor: false,
+});
 
-    
-  });
- var typed = new Typed('#aeftekar', {
-    strings: ["دارای گواهینامه درجه یک", "از", "وزارت میراث فرهنگی , گردشگری" ,"وصنایع دستی"],
-    typeSpeed: 95,    // سرعت تایپ
-    backSpeed: 95,    // سرعت پاک کردن
-    backDelay: 2000,  // تاخیر قبل از پاک کردن
-    loop: true,       // تکرار نامحدود
-    showCursor: true,
-    cursorChar: '⭐📜'   // مکان‌نمای جذاب
-    
-  });
-var typed = new Typed('#nav', {
-   strings: [ "کافه رستوران", "عمارت همای"],
-    typeSpeed: 95,    // سرعت تایپ
-    backSpeed: 95,    // سرعت پاک کردن
-    backDelay: 2000,  // تاخیر قبل از پاک کردن
-    loop: true,       // تکرار نامحدود
-    showCursor:false,
-  
-    
-  });
-// چت بات
+const typedFooter = new Typed('#aeftekar', {
+  strings: [
+    "دارای گواهینامه درجه یک",
+    "از",
+    "وزارت میراث فرهنگی، گردشگری",
+    "و صنایع دستی"
+  ],
+  typeSpeed: 95,
+  backSpeed: 95,
+  backDelay: 2000,
+  loop: true,
+  showCursor: true,
+  cursorChar: '⭐📜'
+});
+
+const typedNav = new Typed('#nav', {
+  strings: ["کافه رستوران", "عمارت همای"],
+  typeSpeed: 95,
+  backSpeed: 95,
+  backDelay: 2000,
+  loop: true,
+  showCursor: false,
+});
+// عناصر DOM
 const chatToggle = document.querySelector('.chat-toggle');
 const chatWidget = document.querySelector('.chat-widget');
 const chatClose = document.querySelector('.chat-close');
@@ -453,38 +565,99 @@ const chatInput = document.querySelector('.chat-input input');
 const sendBtn = document.querySelector('.send-btn');
 const chatBody = document.querySelector('.chat-body');
 
+// باز کردن پنل و مخفی کردن دکمه با انیمیشن
 chatToggle.addEventListener('click', () => {
   chatWidget.classList.add('active');
-  chatToggle.style.display = 'none';
+  chatToggle.classList.add('hidden'); // استفاده از کلاس hidden برای fade
 });
 
+// بستن پنل و بازگشت دکمه
 chatClose.addEventListener('click', () => {
   chatWidget.classList.remove('active');
-  setTimeout(() => chatToggle.style.display = 'block', 500);
+  setTimeout(() => chatToggle.classList.remove('hidden'), 500);
 });
 
+// تابع اضافه کردن پیام
 function addMessage(text, type='user') {
   const msg = document.createElement('div');
   msg.classList.add('chat-message', type);
   msg.textContent = text;
+
+  // انیمیشن ورود پیام
+  msg.style.opacity = 0;
+  msg.style.transform = 'translateY(10px)';
   chatBody.appendChild(msg);
+
+  // انیمیشن نرم
+  requestAnimationFrame(() => {
+    msg.style.transition = 'all 0.4s ease';
+    msg.style.opacity = 1;
+    msg.style.transform = 'translateY(0)';
+  });
+
   chatBody.scrollTop = chatBody.scrollHeight;
 }
 
 // ارسال پیام کاربر
 sendBtn.addEventListener('click', () => {
-  if(chatInput.value.trim() !== '') {
-    addMessage(chatInput.value, 'user');
+  const text = chatInput.value.trim();
+  if(text !== '') {
+    addMessage(text, 'user');
     chatInput.value = '';
+
+    // پاسخ خودکار با تأخیر
     setTimeout(() => {
-      addMessage('سلام! همکار ما به زودی پاسخ می‌دهد.', 'support');
+      addMessage('سلام خوش امدید! پشتیبانان عمارت همای به زودی پاسخ می‌دهد.', 'support');
     }, 1000);
   }
 });
+
+// ارسال با Enter
 chatInput.addEventListener('keypress', e => {
   if(e.key === 'Enter') sendBtn.click();
 });
 
+
+
+
+
+
+
+
+
+
+
+// فانکشن پیشرفته alert
+function showAdvancedAlert(type, message) {
+    const icons = {
+        success: '✅',
+        error: '❌',
+        warning: '⚠️',
+        info: 'ℹ️'
+    };
+
+    Swal.fire({
+        title: icons[type] + ' ' + type.toUpperCase(),
+        text: message,
+        icon: type,
+        showCancelButton: type === 'warning', // فقط برای هشدار دکمه لغو اضافه کن
+        confirmButtonText: 'باشه',
+        cancelButtonText: 'لغو',
+        showClass: {
+            popup: 'swal2-show swal2-animate__animated swal2-animate__fadeInDown'
+        },
+        hideClass: {
+            popup: 'swal2-hide swal2-animate__animated swal2-animate__fadeOutUp'
+        },
+        timer: type === 'info' ? 4000 : undefined, // پیام info خودکار بسته شود
+        timerProgressBar: true
+    });
+}
+
+// جایگزینی global alert (اختیاری)
+window.alert = function(message) {
+    showAdvancedAlert('info', message);
+};
 </script>
 
 </body>
