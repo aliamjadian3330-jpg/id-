@@ -1,0 +1,491 @@
+﻿<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>رستوران من | تجربه‌ای متفاوت</title>
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://unpkg.com/@majidh1/jalalidatepicker/dist/jalalidatepicker.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+</head>
+<body>
+
+<!-- ناوبری -->
+<div class="nav-container">
+  <img class="img had" src="./images.jpg">
+  <div class="logo">
+    <span id="nav"></span>
+    
+  </div>
+  <input type="checkbox" id="menu-toggle">
+  <label for="menu-toggle" class="menu-icon" style="margin-right:80%;position: fixed; ">&#9776;</label>
+  <nav class="nav">
+    <ul>
+      <li><a href="#">خانه</a></li>
+      <li><a href="#">منو</a></li>
+      <li><a href="#">درباره ما</a></li>
+      <li><a href="#">تماس</a></li>
+      <li><button class="btn-reserve">رزرو میز</button></li>
+    </ul>
+  </nav>
+</div>
+
+<!-- هدر اسلایدی -->
+<header>
+  <div class="slide"></div>
+  <div class="slide"></div>
+  <div class="slide"></div>
+  <div class="slide"></div>
+  <div class="overlay"></div>
+
+    
+  <div class="animated-header-text">
+  <h1><span id="typed-text"></span></h1>
+  <p>بهترین تجربه غذا را در محیطی دلنشین داشته باشید</p>
+</div>
+
+  </div> 
+
+  <!-- محتوای هدر -->
+  <div class="header-content">
+    <h1>بهترین طعم‌ها را تجربه کنید</h1>
+    <p>با غذاهای تازه و لذیذ ما، لحظات خاص بسازید</p>
+    
+  </div>
+</header>
+
+</header>
+
+<!-- ===== Article / About Section (اتری‌کل) ===== -->
+<section class="restaurant-article" aria-labelledby="about-title">
+  <div class="container">
+    <div class="article-grid">
+      <div class="text-card">
+        <h2 id="about-title">داستان ما — طعمی که می‌ماند</h2>
+        <p>
+          رستوران ما ترکیبی از دستورهای سنتی و خلاقیت مدرن است. ما با انتخاب مواد اولیه‌ی تازه
+          و محلی، آشپزان مجرب و محیطی گرم و صمیمی تلاش می‌کنیم هر وعده را به یک تجربهٔ خاص
+          تبدیل کنیم. هدف ما خلق لحظات به‌یادماندنی برای شماست.
+        </p>
+
+        <ul class="highlights">
+          <li><strong>مواد اولیه محلی</strong> — تازه و باکیفیت</li>
+          <li><strong>آشپزخانه باز</strong> — شفاف و قابل مشاهده</li>
+          <li><strong>فضای دنج</strong> — مناسب قرارهای دوستانه و خانوادگی</li>
+        </ul>
+<!-- منو -->
+        <div class="article-actions">
+          <a href="#menu" class="btn-outline">دیدن منو</a>
+          <a href="#reserve" class="btn-primary">رزرو میز</a>
+        </div>
+      </div>
+
+      <figure class="img-card" aria-hidden="true">
+        <img src="./عکس همبرگر.jpg" alt="نمونه‌ای از غذاهای رستوران">
+        <figcaption style="text-align: center;font-weight: bolder;font-size: x-large;">ترکیب طعم‌ها با تزئین خاص</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+<!-- منو اصلی -->
+ <section class="menu-section" id="menu">
+  <div class="container">
+    <h2 class="section-title">منوی رستوران</h2>
+    <p class="section-subtitle">غذاهای خوش‌طعم ما در دسته‌بندی‌های مختلف</p>
+
+    <!-- تب‌های دسته‌بندی -->
+    <div class="menu-tabs">
+      <button class="tab-btn active" data-category="pizza">پیتزا</button>
+      <button class="tab-btn" data-category="drinks">نوشیدنی</button>
+      <button class="tab-btn" data-category="cafe">کافه</button>
+      <button class="tab-btn" data-category="appetizers">پیش‌غذا</button>
+      <button class="tab-btn" data-category="main">غذای اصلی</button>
+    </div>
+
+    <!-- شبکه غذاها -->
+    <div class="menu-grid">
+      <!-- پیتزا -->
+      <div class="menu-card" data-category="pizza">
+        <img src="./عکس غذای مرغ گریل در رستوران های شیک.jpg" alt="پیتزا مخصوص">
+        <div class="menu-info">
+          <h3>پیتزا مخصوص</h3>
+          <p>ترکیب گوشت، قارچ و پنیر چدار</p>
+          <span class="price">۳۲۰,۰۰۰ تومان</span>
+        </div>
+      </div>
+      <div class="menu-card" data-category="pizza">
+        <img src="./عکس همبرگر.jpg" alt="پیتزا مرغ">
+        <div class="menu-info">
+          <h3>پیتزا مرغ</h3>
+          <p>مرغ تازه با پنیر موزارلا</p>
+          <span class="price">۲۸۰,۰۰۰ تومان</span>
+        </div>
+      </div>
+
+      <!-- نوشیدنی -->
+      <div class="menu-card" data-category="drinks">
+        <img src="./عکس غذای مرغ گریل در رستوران های شیک.jpg" alt="اسموتی توت فرنگی">
+        <div class="menu-info">
+          <h3>اسموتی توت فرنگی</h3>
+          <p>تازه و خنک</p>
+          <span class="price">۵۰,۰۰۰ تومان</span>
+        </div>
+      </div>
+
+      <!-- کافه -->
+      <div class="menu-card" data-category="cafe">
+        <img src="./download.jpg" alt="کاپوچینو">
+        <div class="menu-info">
+          <h3>کاپوچینو</h3>
+          <p>قهوه خوش‌طعم و کرم دار</p>
+          <span class="price">۴۵,۰۰۰ تومان</span>
+        </div>
+      </div>
+
+      <!-- پیش‌غذا -->
+      <div class="menu-card" data-category="appetizers">
+        <img src="./عکس غذا های رستوران شیک.jpg" alt="سالاد سزار">
+        <div class="menu-info">
+          <h3>سالاد سزار</h3>
+          <p>تازه و سبک</p>
+          <span class="price">۷۰,۰۰۰ تومان</span>
+        </div>
+      </div>
+
+      <!-- غذای اصلی -->
+      <div class="menu-card" data-category="main">
+        <img src="./عکس همبرگر.jpg" alt="استیک گوشت">
+        <div class="menu-info">
+          <h3>استیک گوشت</h3>
+          <p>آبدار و لذیذ</p>
+          <span class="price">۳۸۰,۰۰۰ تومان</span>
+        </div>
+      </div>
+
+      <!-- می‌توان کارت‌ها را تا ۶۰ مورد ادامه داد -->
+    </div>
+  </div>
+</section>
+<!-- معرفی نامه -->
+ <section class="chefs-section">
+  <div class="container">
+    <h2 class="section-title">سرآشپزهای حرفه‌ای ما</h2>
+    <p class="section-subtitle">با تیم حرفه‌ای ما، بهترین طعم‌ها را تجربه کنید</p>
+
+    <div class="chefs-grid">
+      <!-- کارت سرآشپز -->
+      <div class="chef-card">
+        <div class="chef-img">
+          <img src="./عکس chef.jpg" alt="سرآشپز علی">
+        </div>
+        <div class="chef-info">
+          <h3>علی حسینی</h3>
+          <p>سرآشپز پیتزا و غذاهای ایتالیایی</p>
+        </div>
+      </div>
+
+      <div class="chef-card">
+        <div class="chef-img">
+          <img src="./عکس های سراشپز.jpg" alt="سرآشپز نرگس">
+        </div>
+        <div class="chef-info">
+          <h3>نرگس موسوی</h3>
+          <p>سرآشپز دسر و شیرینی‌های ویژه</p>
+        </div>
+      </div>
+
+      <div class="chef-card">
+        <div class="chef-img">
+          <img src="./عکس های سراشپز (2).jpg" alt="سرآشپز رضا">
+        </div>
+        <div class="chef-info">
+          <h3>رضا کریمی</h3>
+          <p>سرآشپز غذاهای دریایی و پیش‌غذا</p>
+        </div>
+      </div>
+
+      <div class="chef-card">
+        <div class="chef-img">
+          <img src="./عکس chef (1).jpg" alt="سرآشپز مهسا">
+        </div>
+        <div class="chef-info">
+          <h3>مهسا شریفی</h3>
+          <p>سرآشپز نوشیدنی‌ها و کافه</p>
+        </div>
+      </div>
+
+      <!-- می‌توان کارت‌ها را بیشتر اضافه کرد -->
+    </div>
+  </div>
+</section>
+<!-- رزرومیز -->
+ <section class="reservation-section">
+  <div class="container">
+    <div class="reservation-grid">
+      <!-- فرم رزرو -->
+      <div class="reservation-form">
+        <h2 class="section-title">رزرو میز</h2>
+        <p class="section-subtitle">به راحتی میز خود را رزرو کنید و لحظاتی خاص را تجربه کنید</p>
+
+        <form id="reservationForm">
+          <div class="form-group">
+            <label for="name">نام کامل</label>
+            <input type="text" id="name" placeholder="نام خود را وارد کنید" required>
+          </div>
+
+          <div class="form-group">
+            <label for="phone">شماره تماس</label>
+            <input type="tel" id="phone" placeholder="مثال: 09123456789" required>
+          </div>
+
+          <div class="form-group">
+            <label for="date">تاریخ رزرو</label>
+            <input type="text" id="date" placeholder="۱۴۰۴/۰۶/۱۵" data-jdp required>
+          </div>
+
+          <div class="form-group">
+            <label for="time">ساعت</label>
+            <input type="time" id="time" required>
+          </div>
+
+          <div class="form-group">
+            <label for="guests">تعداد نفرات</label>
+            <input type="number" id="guests" min="1" max="20" value="1" required>
+          </div>
+
+          <button type="submit" class="btn-reserve">رزرو میز</button>
+        </form>
+      </div>
+
+      <!-- تصویر کنار فرم -->
+      <div class="reservation-image">
+        <img src="./عکس سالن غذا خوری رستوران شیک.jpg" alt="رزرو میز رستوران">
+      </div>
+    </div>
+  </div>
+</section>
+<!-- نقشه لوکیشن -->
+<section class="map-section">
+  <div class="container">
+    <h2 class="section-title">موقعیت ما روی نقشه</h2>
+    <p class="section-subtitle">رستوران ما در این آدرس قرار دارد:</p>
+    <p class="address">دزفول، خیابان شریعتی غربی، نبش خیابان مسلم</p>
+    <div class="map-wrapper">
+      <iframe
+        width="100%"
+        height="450"
+        style="border:0;"
+        loading="lazy"
+        allowfullscreen=""
+        referrerpolicy="no-referrer-when-downgrade"
+        src="https://maps.google.com/maps?q=دزفول+خیابان+شریعتی+غربی+نبش+خیابان+مسلم&hl=fa&z=16&output=embed">
+      </iframe>
+    </div>
+  </div>
+</section>
+<!-- چت بات -->
+ <!-- پنل چت -->
+<div class="chat-widget">
+  <div class="chat-header">
+    <span>پشتیبانی آنلاین</span>
+    <button class="chat-close">&times;</button>
+  </div>
+  <div class="chat-body">
+    <div class="chat-message support">سلام! چطور می‌تونم کمکتون کنم؟</div>
+  </div>
+  <div class="chat-input">
+    <input type="text" placeholder="پیام خود را بنویسید..." />
+    <button class="send-btn">ارسال</button>
+  </div>
+</div>
+
+<!-- دکمه باز کردن چت -->
+<button class="chat-toggle"><i class="fas fa-comment-dots"></i></button>
+
+<!-- فوتر -->
+ <footer class="footer-section">
+  <div class="container">
+    <div class="footer-grid">
+      <!-- لوگو و معرفی -->
+      <div class="footer-brand">
+        <h2 class="logo"; >عمارت همای</h2>
+        <p>بهترین غذاها با طعم اصیل و کیفیت بی‌نظیر</p>
+      </div>
+
+      <!-- لینک‌های سریع -->
+      <div class="footer-links">
+        <h3>لینک‌های سریع</h3>
+        <ul>
+          <li><a href="#">خانه</a></li>
+          <li><a href="#">منو</a></li>
+          <li><a href="#">درباره ما</a></li>
+          <li><a href="#">تماس</a></li>
+        </ul>
+      </div>
+
+      <!-- شبکه‌های اجتماعی -->
+      <div class="footer-social">
+        <h3>ما را دنبال کنید</h3>
+        <div class="social-icons">
+          <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+          <a href="#" class="social-icon"><i class="fab fa-telegram"></i></a>
+          <a href="#" class="social-icon"><i class="fab fa-whatsapp"></i></a>
+          <a href="#" class="social-icon"><i class="fab fa-facebook"></i></a>
+        </div>
+      </div>
+
+      <!-- آدرس -->
+      <div class="footer-contact">
+        <h3>آدرس ما</h3>
+        <p>دزفول، خیابان شریعتی غربی، نبش خیابان مسلم</p>
+        <p>تلفن: 061-xxxxxxx</p>
+        <p>ایمیل: info@restaurant.com</p>
+      </div>
+    </div>
+    <div class="footer-container">
+    <div class="footer-cert">
+      <img src="./nmad aeftekar.png" alt="نشان وزارت میراث فرهنگی" class="footer-badge">
+      <div class="footer-text">
+        <span id="aeftekar"></span>
+      </div>
+    </div>
+    <div class="footer-bottom"; style="margin-left:50%;">
+      <p>© 2025 کافه رستوران عمارت همای. تمام حقوق این سایت محفوظ میباشد.</p>
+    </div>
+  </div>
+</footer>
+
+<!-- نشانگر موس -->
+<div class="circle-cursor"></div>
+<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+<script src="https://unpkg.com/@majidh1/jalalidatepicker/dist/jalalidatepicker.min.js"></script>
+<script>
+/* موس دایره‌ای */
+const cursor=document.querySelector('.circle-cursor');
+document.addEventListener('mousemove',e=>{
+  cursor.style.top=e.clientY+'px';
+  cursor.style.left=e.clientX+'px';
+});
+document.querySelectorAll('a,button').forEach(el=>{
+  el.addEventListener('mouseenter',()=>cursor.classList.add('big'));
+  el.addEventListener('mouseleave',()=>cursor.classList.remove('big'));
+});
+
+/* تغییر استایل نوار هنگام اسکرول */
+const nav=document.querySelector('.nav-container');
+window.addEventListener('scroll',()=>{
+  if(window.scrollY>50){nav.classList.add('scrolled');}
+  else{nav.classList.remove('scrolled');}
+});
+// منو
+const tabs = document.querySelectorAll('.tab-btn');
+const cards = document.querySelectorAll('.menu-card');
+
+tabs.forEach(tab => {
+  tab.addEventListener('click', () => {
+    // تغییر تب فعال
+    tabs.forEach(t => t.classList.remove('active'));
+    tab.classList.add('active');
+
+    const category = tab.dataset.category;
+
+    // نمایش/مخفی کردن کارت‌ها
+    cards.forEach(card => {
+      if (card.dataset.category === category || category === "all") {
+        card.classList.remove('hidden');
+      } else {
+        card.classList.add('hidden');
+      }
+    });
+  });
+});
+// تاریخ رزرو کتابخانه شمسی
+  // فعالسازی تقویم شمسی روی input تاریخی
+  jalaliDatepicker.startWatch({
+    selector: "#date",
+    autoHide: true,
+    theme: "dark",
+    placeholder: "۱۴۰۴/۰۶/۱۵"
+  });
+
+  // فرم رزرو
+  document.getElementById("reservationForm").addEventListener("submit", function(e) {
+    e.preventDefault();
+    alert("رزرو شما ثبت شد. سپاس از انتخاب شما!");
+    // اینجا می‌تونی ارسال به سرور یا ذخیره اطلاعات انجام بدی
+  });
+  var typed = new Typed('#typed-text', {
+    strings: ["عمارت همای ", "بهترین غذاهای سنتی", "محیطی دلنشین و آرام" ,"با غذاهای تازه و لذیذ ما، لحظاتی به‌یادماندنی بسازید"],
+    typeSpeed: 95,    // سرعت تایپ
+    backSpeed: 95,    // سرعت پاک کردن
+    backDelay: 2000,  // تاخیر قبل از پاک کردن
+    loop: true,       // تکرار نامحدود
+    showCursor:false,
+
+    
+  });
+ var typed = new Typed('#aeftekar', {
+    strings: ["دارای گواهینامه درجه یک", "از", "وزارت میراث فرهنگی , گردشگری" ,"وصنایع دستی"],
+    typeSpeed: 95,    // سرعت تایپ
+    backSpeed: 95,    // سرعت پاک کردن
+    backDelay: 2000,  // تاخیر قبل از پاک کردن
+    loop: true,       // تکرار نامحدود
+    showCursor: true,
+    cursorChar: '⭐📜'   // مکان‌نمای جذاب
+    
+  });
+var typed = new Typed('#nav', {
+   strings: [ "کافه رستوران", "عمارت همای"],
+    typeSpeed: 95,    // سرعت تایپ
+    backSpeed: 95,    // سرعت پاک کردن
+    backDelay: 2000,  // تاخیر قبل از پاک کردن
+    loop: true,       // تکرار نامحدود
+    showCursor:false,
+  
+    
+  });
+// چت بات
+const chatToggle = document.querySelector('.chat-toggle');
+const chatWidget = document.querySelector('.chat-widget');
+const chatClose = document.querySelector('.chat-close');
+const chatInput = document.querySelector('.chat-input input');
+const sendBtn = document.querySelector('.send-btn');
+const chatBody = document.querySelector('.chat-body');
+
+chatToggle.addEventListener('click', () => {
+  chatWidget.classList.add('active');
+  chatToggle.style.display = 'none';
+});
+
+chatClose.addEventListener('click', () => {
+  chatWidget.classList.remove('active');
+  setTimeout(() => chatToggle.style.display = 'block', 500);
+});
+
+function addMessage(text, type='user') {
+  const msg = document.createElement('div');
+  msg.classList.add('chat-message', type);
+  msg.textContent = text;
+  chatBody.appendChild(msg);
+  chatBody.scrollTop = chatBody.scrollHeight;
+}
+
+// ارسال پیام کاربر
+sendBtn.addEventListener('click', () => {
+  if(chatInput.value.trim() !== '') {
+    addMessage(chatInput.value, 'user');
+    chatInput.value = '';
+    setTimeout(() => {
+      addMessage('سلام! همکار ما به زودی پاسخ می‌دهد.', 'support');
+    }, 1000);
+  }
+});
+chatInput.addEventListener('keypress', e => {
+  if(e.key === 'Enter') sendBtn.click();
+});
+
+</script>
+
+</body>
+</html>
