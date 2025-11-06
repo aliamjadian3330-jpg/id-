@@ -500,12 +500,12 @@ nav ul li a:hover{color:var(--accent);transform:translateY(-2px);}
   gap: 18px;
   flex-wrap: wrap;
 }
-
+/* دکمه‌ها مدرن و شیک */
 .btn-primary, .btn-outline {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: 13px 28px;
+  padding: 14px 32px;
   border-radius: 999px;
   font-weight: 700;
   cursor: pointer;
@@ -513,28 +513,55 @@ nav ul li a:hover{color:var(--accent);transform:translateY(-2px);}
   text-decoration: none;
   font-size: 1.05rem;
   letter-spacing: 0.5px;
+  position: relative;
+  overflow: hidden;
 }
+
+/* Primary Button */
 .btn-primary {
   background: linear-gradient(90deg, var(--accent, #ff6f61), var(--accent-dark, #ff3b2e));
   color: #fff;
   box-shadow: 0 8px 25px rgba(255,111,97,0.35);
+  backdrop-filter: blur(4px);
+}
+.btn-primary::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(120deg, rgba(255,255,255,0.15), transparent);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+.btn-primary:hover::after {
+  opacity: 1;
 }
 .btn-primary:hover {
-  transform: translateY(-4px) scale(1.03);
-  box-shadow: 0 10px 30px rgba(255,59,46,0.4);
+  transform: translateY(-4px) scale(1.05);
+  box-shadow: 0 12px 35px rgba(255,59,46,0.45);
 }
+
+/* Outline Button با شیشه‌ای */
 .btn-outline {
-  background: transparent;
-  color: #fff;
-  border: 1.8px solid rgba(255,255,255,0.18);
-  backdrop-filter: blur(6px);
+  background: rgba(255,255,255,0.05);
+  color: #e64848;
+  border: 2px solid rgba(255,255,255,0.18);
+  backdrop-filter: blur(8px);
+  box-shadow: 0 4px 15px rgba(0,0,0,0.25);
 }
 .btn-outline:hover {
-  background: rgba(255,255,255,0.07);
-  transform: translateY(-3px);
+  background: rgba(255,255,255,0.1);
+  transform: translateY(-3px) scale(1.03);
   border-color: var(--accent, #ff6f61);
   color: var(--accent, #ff6f61);
+  box-shadow: 0 6px 20px rgba(255,111,97,0.35);
 }
+
+/* افکت کلی دکمه هنگام فعال */
+.btn-primary:active, .btn-outline:active {
+  transform: scale(0.97);
+  box-shadow: 0 5px 18px rgba(0,0,0,0.3);
+}
+
 
 /* تصویر */
 .img-card {
@@ -592,7 +619,7 @@ nav ul li a:hover{color:var(--accent);transform:translateY(-2px);}
   .highlights li { font-size: 0.9rem; }
 }
 /* منو */
-/* === Menu Section Modern === */
+/* === Menu Section Modern & Elegant === */
 .menu-section {
   padding: 100px 20px;
   background: radial-gradient(circle at top left, rgba(255,111,97,0.05), rgba(0,0,0,0.18));
@@ -601,27 +628,24 @@ nav ul li a:hover{color:var(--accent);transform:translateY(-2px);}
   overflow: hidden;
 }
 
-.menu-section::before {
-  content: "";
-  position: absolute;
-  top: -80px;
-  right: -80px;
-  width: 300px;
-  height: 300px;
-  background: radial-gradient(circle, rgba(255,59,46,0.25), transparent 70%);
-  filter: blur(100px);
-  z-index: 0;
-}
+.menu-section::before,
 .menu-section::after {
   content: "";
   position: absolute;
-  bottom: -80px;
-  left: -80px;
   width: 300px;
   height: 300px;
-  background: radial-gradient(circle, rgba(255,111,97,0.2), transparent 70%);
-  filter: blur(100px);
+  background: radial-gradient(circle, rgba(255,111,97,0.25), transparent 70%);
+  filter: blur(120px);
   z-index: 0;
+}
+
+.menu-section::before {
+  top: -80px;
+  right: -80px;
+}
+.menu-section::after {
+  bottom: -80px;
+  left: -80px;
 }
 
 .menu-section .container {
@@ -635,8 +659,8 @@ nav ul li a:hover{color:var(--accent);transform:translateY(-2px);}
 .section-title {
   font-size: 3rem;
   margin-bottom: 12px;
-  font-weight: 800;
-  text-shadow: 0 3px 20px rgba(0,0,0,0.45);
+  font-weight: 900;
+  text-shadow: 0 4px 25px rgba(0,0,0,0.5);
   background: linear-gradient(90deg, #ff6f61, #ff3b2e);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -647,7 +671,8 @@ nav ul li a:hover{color:var(--accent);transform:translateY(-2px);}
   color: rgba(255,255,255,0.85);
   letter-spacing: 0.5px;
 }
-/* تب‌ها (Tabs) حرفه‌ای و مدرن */
+
+/* Tabs حرفه‌ای با Glow و Gradient */
 .menu-tabs {
   display: flex;
   justify-content: center;
@@ -662,7 +687,7 @@ nav ul li a:hover{color:var(--accent);transform:translateY(-2px);}
   position: relative;
   padding: 12px 28px;
   border: 2px solid rgba(255,255,255,0.15);
-  border-radius: 30px;
+  border-radius: 35px;
   background: rgba(255,255,255,0.05);
   color: #fff;
   font-weight: 600;
@@ -672,7 +697,7 @@ nav ul li a:hover{color:var(--accent);transform:translateY(-2px);}
   transition: all 0.4s ease;
 }
 
-/* افکت گرادیانت متحرک روی Hover و Active */
+/* افکت Gradient روی Hover و Active */
 .tab-btn::after {
   content: "";
   position: absolute;
@@ -689,41 +714,32 @@ nav ul li a:hover{color:var(--accent);transform:translateY(-2px);}
 .tab-btn.active::after {
   left: 0;
 }
-
-/* تغییر رنگ متن روی Hover و Active */
 .tab-btn:hover,
 .tab-btn.active {
   color: #fff;
-  transform: translateY(-3px) scale(1.05);
+  transform: translateY(-4px) scale(1.08);
   border-color: var(--accent, #ff6f61);
+  box-shadow: 0 6px 25px rgba(255,111,97,0.45);
 }
-
-/* Glow subtle برای حالت فعال */
-.tab-btn.active {
-  box-shadow: 0 6px 20px rgba(255,111,97,0.45);
-}
-
-/* متن روی تب همیشه روی لایه بالاتر */
 .tab-btn span {
   position: relative;
   z-index: 1;
 }
 
-/* Grid کارت‌ها */
+/* Grid کارت‌ها با افکت شیشه‌ای */
 .menu-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill,minmax(260px,1fr));
   gap: 30px;
 }
 
-/* کارت غذا مدرن */
 .menu-card {
   background: rgba(255,255,255,0.05);
-  border-radius: 20px;
+  border-radius: 25px;
   overflow: hidden;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.45);
-  backdrop-filter: blur(8px);
-  transition: all 0.5s ease, transform 0.5s ease;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.5);
+  backdrop-filter: blur(12px);
+  transition: all 0.5s ease, transform 0.5s ease, box-shadow 0.5s ease;
   position: relative;
   cursor: pointer;
 }
@@ -734,43 +750,44 @@ nav ul li a:hover{color:var(--accent);transform:translateY(-2px);}
   left: -50%;
   width: 200%;
   height: 200%;
-  background: linear-gradient(60deg, rgba(255,255,255,0.1), transparent 70%);
+  background: linear-gradient(60deg, rgba(255,255,255,0.08), transparent 70%);
   transform: rotate(25deg);
   transition: all 0.5s ease;
   opacity: 0;
 }
 .menu-card:hover::before {
   opacity: 1;
-  transform: rotate(25deg) translate(10px,10px);
+  transform: rotate(25deg) translate(12px,12px);
 }
 .menu-card img {
   width: 100%;
   height: 220px;
   object-fit: cover;
-  transition: transform 0.5s ease, filter 0.5s ease;
+  transition: transform 0.6s ease, filter 0.5s ease;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
 }
 .menu-card:hover img {
-  transform: scale(1.08);
-  filter: brightness(1.15);
+  transform: scale(1.1);
+  filter: brightness(1.2);
 }
 .menu-info {
-  padding: 18px 22px 24px;
+  padding: 20px 25px 28px;
   text-align: left;
 }
 .menu-info h3 {
-  font-size: 1.4rem;
-  margin-bottom: 6px;
-  font-weight: 700;
+  font-size: 1.5rem;
+  margin-bottom: 8px;
+  font-weight: 800;
 }
 .menu-info p {
   font-size: 1rem;
   color: rgba(255,255,255,0.85);
-  margin-bottom: 12px;
+  margin-bottom: 14px;
   line-height: 1.6;
 }
 .menu-info .price {
-  font-weight: 800;
-  font-size: 1.15rem;
+  font-weight: 900;
+  font-size: 1.2rem;
   color: var(--accent, #ff6f61);
 }
 
@@ -786,7 +803,7 @@ nav ul li a:hover{color:var(--accent);transform:translateY(-2px);}
   .menu-grid { gap: 25px; grid-template-columns: repeat(auto-fill,minmax(220px,1fr)); }
 }
 @media (max-width: 768px) {
-  .menu-info h3 { font-size: 1.2rem; }
+  .menu-info h3 { font-size: 1.25rem; }
   .menu-card img { height: 180px; }
   .tab-btn { padding: 10px 22px; font-size: 0.95rem; }
 }
@@ -795,6 +812,7 @@ nav ul li a:hover{color:var(--accent);transform:translateY(-2px);}
   .section-title { font-size: 2rem; }
   .section-subtitle { font-size: 1rem; }
 }
+
 /* معرفی سراشپز*/
 /* === Chefs Section مدرن و حرفه‌ای === */
 .chefs-section {
@@ -1194,7 +1212,7 @@ nav ul li a:hover{color:var(--accent);transform:translateY(-2px);}
 }
 /* فوتر */
 .footer-section {
-  background: radial-gradient(circle at top left, rgba(216, 209, 209, 0.788), rgba(212, 207, 207, 0.74));
+  background: radial-gradient(circle at top left, rgb(250, 246, 246), rgba(255, 251, 251, 0.932));
   color: #140808;
   padding: 80px 20px 40px;
   font-family: 'Vazirmatn', sans-serif;
@@ -1360,58 +1378,74 @@ nav ul li a:hover{color:var(--accent);transform:translateY(-2px);}
   .animated-header-text h1 { font-size: 1.8rem; }
   .animated-header-text p { font-size: 1rem; }
 }
-/* چت بات */
-/* دکمه چت شناور */
+/* دکمه چت شناور شیشه‌ای */
 .chat-toggle {
   position: fixed;
   bottom: 25px;
   right: 25px;
-  width: 60px;
-  height: 60px;
+  width: 70px;
+  height: 70px;
   border-radius: 50%;
-  background: linear-gradient(45deg, #ff6f61, #ff3b2e);
-  color: #fff;
-  font-size: 24px;
-  border: none;
+  background: rgba(255,255,255,0.15);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255,255,255,0.3);
+  color: #ff3b2e;
+  font-size: 28px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   cursor: pointer;
-  box-shadow: 0 6px 18px rgba(255,111,97,0.4);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.25);
   z-index: 9999;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-.chat-toggle:hover {
-  transform: scale(1.1);
-  box-shadow: 0 8px 25px rgba(255,59,46,0.5);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, opacity 0.3s ease, background 0.3s ease;
 }
 
-/* پنل چت */
-/* پنل چت پیشرفته */
+/* هاور دکمه */
+.chat-toggle:hover {
+  transform: scale(1.15);
+  box-shadow: 0 12px 35px rgba(0,0,0,0.35);
+  background: rgba(255,255,255,0.25);
+}
+
+/* مخفی شدن دکمه هنگام باز شدن پنل */
+.chat-toggle.hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* پنل چت مدرن شیشه‌ای */
 .chat-widget {
   position: fixed;
   bottom: 100px;
   right: 25px;
   width: 360px;
   max-width: 90%;
-  background: rgba(20,20,20,0.95);
+  background: rgba(20,20,20,0.75);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
   border-radius: 20px;
   box-shadow: 0 15px 50px rgba(0,0,0,0.7);
   overflow: hidden;
   display: flex;
   flex-direction: column;
-  z-index: 9999;
+  z-index: 9998;
   transform: translateY(50px);
   opacity: 0;
   transition: transform 0.5s ease, opacity 0.5s ease;
 }
 
-/* نمایش هنگام فعال شدن */
+/* نمایش پنل */
 .chat-widget.active {
   transform: translateY(0);
   opacity: 1;
 }
 
-/* هدر چت */
+/* هدر شیشه‌ای */
 .chat-header {
-  background: linear-gradient(135deg, #ff6f61, #ff3b2e);
+  background: rgba(255,111,97,0.85);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
   color: #fff;
   padding: 15px 20px;
   font-weight: 700;
@@ -1419,7 +1453,9 @@ nav ul li a:hover{color:var(--accent);transform:translateY(-2px);}
   justify-content: space-between;
   align-items: center;
   box-shadow: 0 5px 15px rgba(0,0,0,0.4);
+  border-bottom: 1px solid rgba(255,255,255,0.2);
 }
+
 .chat-header .chat-close {
   background: transparent;
   border: none;
@@ -1447,6 +1483,7 @@ nav ul li a:hover{color:var(--accent);transform:translateY(-2px);}
 .chat-body::-webkit-scrollbar-thumb { background-color: #ff6f61; border-radius: 10px; }
 .chat-body::-webkit-scrollbar-track { background: rgba(255,255,255,0.05); }
 
+/* پیام‌ها */
 .chat-message {
   background: rgba(255,255,255,0.1);
   padding: 12px 16px;
@@ -1459,7 +1496,7 @@ nav ul li a:hover{color:var(--accent);transform:translateY(-2px);}
   transform: translateY(10px);
   animation: msgEnter 0.4s forwards;
 }
-.chat-message.user { align-self: flex-end; background: #ff6f61; }
+.chat-message.user { align-self: flex-end; background: rgba(255,111,97,0.85); }
 .chat-message.support { align-self: flex-start; background: rgba(255,255,255,0.15); }
 
 /* انیمیشن ورود پیام */
@@ -1489,7 +1526,7 @@ nav ul li a:hover{color:var(--accent);transform:translateY(-2px);}
   box-shadow: 0 0 15px rgba(255,111,97,0.6);
 }
 .chat-input .send-btn {
-  background: linear-gradient(135deg, #ff6f61, #ff3b2e);
+  background: rgba(255,111,97,0.85);
   border: none;
   color: #fff;
   border-radius: 15px;
@@ -1503,23 +1540,94 @@ nav ul li a:hover{color:var(--accent);transform:translateY(-2px);}
   box-shadow: 0 6px 18px rgba(255,59,46,0.5);
 }
 
-/* دکمه چت شناور */
+/* ریسپانسیو */
+@media (max-width: 768px) {
+  .chat-toggle {
+    width: 80px;
+    height: 80px;
+    font-size: 32px;
+    bottom: 20px;
+    right: 20px;
+  }
+  .chat-widget {
+    width: 90%;
+    height: 60%;
+    bottom: 90px;
+    right: 5%;
+  }
+}
+
+/* دکمه چت شیشه‌ای */
 .chat-toggle {
   position: fixed;
   bottom: 25px;
-  right:89% ;
-  width: 65px;
-  height: 65px;
+  right: 25px;
+  width: 70px;
+  height: 70px;
   border-radius: 50%;
-  background: linear-gradient(45deg, #ff6f61, #ff3b2e);
-  color: #fff;
-  font-size: 26px;
-  border: none;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: #ff3b2e;
+  font-size: 28px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   cursor: pointer;
-  box-shadow: 0 8px 20px rgba(255,111,97,0.5);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
   z-index: 9999;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease, opacity 0.3s ease;
 }
+
+/* هاور دکمه */
+.chat-toggle:hover {
+  transform: scale(1.15);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
+  background: rgba(255, 255, 255, 0.25);
+}
+
+/* مخفی شدن دکمه وقتی کلاس active اضافه شود */
+.chat-toggle.hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* پنل چت */
+.chat-panel {
+  position: fixed;
+  bottom: 100px;
+  right: 25px;
+  width: 300px;
+  height: 400px;
+  background: rgba(255,255,255,0.95);
+  border-radius: 15px;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.3);
+  padding: 20px;
+  display: none; /* پیش‌فرض مخفی */
+  z-index: 9998;
+}
+.chat-panel.active {
+  display: block;
+}
+
+/* ریسپانسیو */
+@media (max-width: 768px) {
+  .chat-toggle {
+    width: 80px;
+    height: 80px;
+    font-size: 32px;
+    bottom: 20px;
+    right: 20px;
+  }
+  .chat-panel {
+    width: 90%;
+    height: 60%;
+    bottom: 90px;
+    right: 5%;
+  }
+}
+
 .chat-toggle:hover { transform: scale(1.15); }
 
 
@@ -1588,4 +1696,85 @@ nav ul li a:hover{color:var(--accent);transform:translateY(-2px);}
     flex: 0;
     text-align: left;
   }
+}
+/* کانتینر */
+.namad.siad{
+  display: flex;                /* ردیف/ستون انعطاف‌پذیر */
+  flex-wrap: wrap;              /* اگر جا کم باشد، به خط بعدی می‌رود */
+  gap: 16px;                    /* فاصله بین تصاویر */
+  align-items: center;          /* تراز عمودی تصاویر */
+  justify-content: center;      /* وسط‌چین کردن افقی */
+  padding: 12px;                /* فضای داخلی کانتینر */
+  background: transparent;      /* در صورت نیاز رنگ پس‌زمینه را تغییر دهید */
+  direction: rtl;               /* راست‌چین بودن محتوا (در صورت نیاز) */
+}
+
+/* استایل هر تصویر */
+.namad.siad img{
+  width: 150px;                 /* عرض پیش‌فرض هر نماد */
+  max-width: 22%;               /* منع از بزرگ‌شدن بیش از حد روی صفحه‌های بزرگ */
+  height: auto;                 /* حفظ نسبت تصویر */
+  object-fit: contain;          /* تضمین نمایش کامل نماد داخل باکس */
+  background: #ffffff;          /* پس‌زمینه سفید برای تصاویر شفاف */
+  padding: 8px;                 /* فاصله داخلی تصویر (اگر لازم است) */
+  border-radius: 8px;           /* گوشه‌های گرد */
+  box-shadow: 0 6px 18px rgba(0,0,0,0.07); /* سایه ملایم */
+  transition: transform 180ms ease, box-shadow 180ms ease; /* افکت حرکت */
+  cursor: default;
+  display: block;
+}
+
+/* افکت هاور */
+.namad.siad img:hover,
+.namad.siad img:focus{
+  transform: translateY(-4px) scale(1.04);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.12);
+  outline: none;
+}
+
+/* نمای موبایل — اندازه کوچکتر و چینش بهتر */
+@media (max-width: 480px){
+  .namad.siad{
+    gap: 10px;
+    padding: 8px;
+  }
+  .namad.siad img{
+    width: 86px;
+    padding: 6px;
+    border-radius: 6px;
+  }
+}
+
+/* اگر می‌خواهید تمام نمادها یکسان ارتفاع/عرض دقیق داشته باشند (گزینهٔ جایگزین) */
+/*
+.namad.siad img{
+  width: 100px;
+  height: 60px;
+  object-fit: cover;
+}
+*/
+/* تغییر ظاهر دکمه‌ها و فونت‌ها */
+.swal2-popup {
+    font-family: 'Tahoma', sans-serif;
+    font-size: 16px;
+    border-radius: 15px;
+}
+
+.swal2-title {
+    color: #333;
+    font-weight: bold;
+}
+
+.swal2-confirm {
+    background-color: #4CAF50 !important;
+    color: white !important;
+    border-radius: 10px !important;
+    font-size: 16px;
+}
+
+.swal2-cancel {
+    background-color: #f44336 !important;
+    color: white !important;
+    border-radius: 10px !important;
+    font-size: 16px;
 }
