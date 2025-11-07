@@ -453,29 +453,18 @@
   </div>
 </footer>
 
-<!-- نشانگر موس -->
-<div class="circle-cursor"></div>
 <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
 <script src="https://unpkg.com/@majidh1/jalalidatepicker/dist/jalalidatepicker.min.js"></script>
 
-<button onclick="showAdvancedAlert('success', 'عملیات موفقیت‌آمیز بود!')">موفقیت</button>
-<button onclick="showAdvancedAlert('error', 'عملیات با خطا مواجه شد!')">خطا</button>
-<button onclick="showAdvancedAlert('warning', 'هشدار! مراقب باشید')">هشدار</button>
-<button onclick="showAdvancedAlert('info', 'این یک پیام اطلاعاتی است')">اطلاعات</button>
 
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
 <script>
-/* موس دایره‌ای */
-const cursor=document.querySelector('.circle-cursor');
-document.addEventListener('mousemove',e=>{
-  cursor.style.top=e.clientY+'px';
-  cursor.style.left=e.clientX+'px';
-});
-document.querySelectorAll('a,button').forEach(el=>{
-  el.addEventListener('mouseenter',()=>cursor.classList.add('big'));
-  el.addEventListener('mouseleave',()=>cursor.classList.remove('big'));
-});
+  
+<button onclick="showAdvancedAlert('success', 'عملیات موفقیت‌آمیز بود!')">موفقیت</button>
+<button onclick="showAdvancedAlert('error', 'عملیات با خطا مواجه شد!')">خطا</button>
+<button onclick="showAdvancedAlert('warning', 'هشدار! مراقب باشید')">هشدار</button>
+<button onclick="showAdvancedAlert('info', 'این یک پیام اطلاعاتی است')">اطلاعات</button>
 
 /* تغییر استایل نوار هنگام اسکرول */
 const nav=document.querySelector('.nav-container');
@@ -662,3 +651,4 @@ window.alert = function(message) {
 
 </body>
 </html>
+
