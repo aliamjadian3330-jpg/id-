@@ -19,60 +19,7 @@
 
 </head>
 <body>
-<!-- نشانگر موس -->
-<div class="circle-cursor"></div>
 
-<style>
-.circle-cursor {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 20px;
-  height: 20px;
-  border: 2px solid #fff;
-  border-radius: 50%;
-  pointer-events: none;
-  transform: translate(-50%, -50%);
-  transition: width 0.2s ease, height 0.2s ease, border 0.2s ease;
-  z-index: 9999;
-  opacity: 0; /* در شروع مخفی */
-}
-.circle-cursor.big {
-  width: 40px;
-  height: 40px;
-  border-color: #ff0;
-}
-.show-cursor .circle-cursor {
-  opacity: 1;
-}
-</style>
-
-<script>
-const cursor = document.querySelector('.circle-cursor');
-
-// فقط در دسکتاپ فعال شود
-if (window.innerWidth > 768) {
-  document.body.classList.add('show-cursor');
-
-  let x = 0, y = 0;
-
-  document.addEventListener('mousemove', e => {
-    x = e.clientX;
-    y = e.clientY;
-  });
-
-  const render = () => {
-    cursor.style.transform = `translate(${x}px, ${y}px)`;
-    requestAnimationFrame(render);
-  };
-  render();
-
-  document.querySelectorAll('a, button').forEach(el => {
-    el.addEventListener('mouseenter', () => cursor.classList.add('big'));
-    el.addEventListener('mouseleave', () => cursor.classList.remove('big'));
-  });
-}
-</script>
 <!-- ناوبری -->
 <div class="nav-container">
   <img class="img had" src="./download (1).jpg">
@@ -704,5 +651,6 @@ window.alert = function(message) {
 
 </body>
 </html>
+
 
 
