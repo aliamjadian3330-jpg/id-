@@ -381,24 +381,6 @@ nav ul li a:hover{color:var(--accent);transform:translateY(-2px);}
   #menu-toggle:checked~nav ul{right:0;}
   .menu-icon{display:block;}
 }
-/* موس دایره‌ای توخالی */
-.circle-cursor {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 20px;
-  height: 20px;
-  border: 2px solid rgba(7, 7, 19, 0.9); /* 🔹 فقط خط دور دایره */
-  border-radius: 50%;
-  pointer-events: none;
-  transform: translate(-50%, -50%);
-  transition: transform 0.1s ease-out, width 0.2s, height 0.2s;
-  z-index: 9999;
-  background-color: transparent; /* 🔸 بدون رنگ داخل */
-}
-
-.circle-cursor.big{width:40px;height:40px;}
-
   /* === Article / About Section (نسخه حرفه‌ای) === */
 .restaurant-article {
   position: relative;
@@ -1778,3 +1760,4 @@ nav ul li a:hover{color:var(--accent);transform:translateY(-2px);}
     border-radius: 10px !important;
     font-size: 16px;
 }
+
